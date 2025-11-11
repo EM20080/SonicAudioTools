@@ -17,11 +17,7 @@ namespace AcbEditor
     {
         static void Main(string[] args)
         {
-            if (!File.Exists(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile))
-            {
-                Settings.Default.Reset();
-                Settings.Default.Save();
-            }
+
 
             if (args.Length < 1)
             {

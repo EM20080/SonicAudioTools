@@ -12,6 +12,11 @@ namespace SonicAudioLib.CriMw
 {
     public class CriTableWriter : IDisposable
     {
+        static CriTableWriter()
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+        }
+
         public enum Status
         {
             Begin,

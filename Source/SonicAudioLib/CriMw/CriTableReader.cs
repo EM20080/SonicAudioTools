@@ -10,6 +10,11 @@ namespace SonicAudioLib.CriMw
 {
     public class CriTableReader : IDisposable
     {
+        static CriTableReader()
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+        }
+
         private List<CriTableField> fields;
         private Stream source;
         private CriTableHeader header;

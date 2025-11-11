@@ -245,3 +245,6 @@ ModelManifest.xml
 .fake/
 *.config
 [Rr]elease/*.xml
+
+# Zip archives
+*.zip

@@ -8,6 +8,10 @@ using System.Collections;
 
 namespace SonicAudioLib.CriMw
 {
+        static CriTableReader()
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+        }
     public class CriTableReader : IDisposable
     {
         private List<CriTableField> fields;

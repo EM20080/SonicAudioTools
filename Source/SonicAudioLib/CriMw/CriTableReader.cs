@@ -8,12 +8,12 @@ using System.Collections;
 
 namespace SonicAudioLib.CriMw
 {
-        static CriTableReader()
+    public class CriTableReader : IDisposable
+    {
+            static CriTableReader()
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         }
-    public class CriTableReader : IDisposable
-    {
         private List<CriTableField> fields;
         private Stream source;
         private CriTableHeader header;
